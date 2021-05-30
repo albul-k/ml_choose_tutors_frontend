@@ -8,7 +8,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 
-export default function FormContent({ state, setState }: { state: any, setState: any }) {
+export default function Features({ state, setState }: { state: any, setState: any }) {
 
   const handleChangeCheckbox = (event: React.ChangeEvent<HTMLInputElement>) => {
     setState({ ...state, [event.target.name]: event.target.checked===false?0:1 });
