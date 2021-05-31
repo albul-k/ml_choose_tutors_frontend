@@ -85,7 +85,7 @@ function App() {
         console.log(error);
       });
   }, [state])
-  // 
+  
   return (
     <React.Fragment>
       <CssBaseline />
@@ -96,7 +96,7 @@ function App() {
           </Typography>
           <React.Fragment>
             <Box className={classes.content}>
-              <Features state={initState} setState={setState} />
+              <Features state={state} setState={setState} />
             </Box>
             <Divider />
             <Box className={classes.content}>
