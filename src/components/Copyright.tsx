@@ -8,13 +8,10 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 export default function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
-      {'Copyright © '}
       <Link color="inherit" href="https://github.com/albul-k/ml_choose_tutors_frontend" target="_blank">
         <GitHubIcon />
         albul-k
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
+      </Link>
     </Typography>
   );
 };

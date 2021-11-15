@@ -42,9 +42,15 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   },
+  content_header: {
+    paddingBottom: theme.spacing(3),
+  },
   content: {
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
+  },
+  content_footer: {
+    paddingTop: theme.spacing(3),
   },
   buttons: {
     display: 'flex',
@@ -80,26 +86,28 @@ function App() {
   useEffect(() => {
     axios.post('http://localhost:5000/predict', state)
       .then((response: any) => {
-        setResult(response.data);
+        setResult(response.data.message);
       }, (error) => {
         console.log(error);
       });
   }, [state])
-  
+
   return (
     <React.Fragment>
       <CssBaseline />
       <main className={classes.layout}>
         <Paper className={classes.paper}>
-          <Typography component="h1" variant="h4" align="center">
-            Features
-          </Typography>
+          <Box className={classes.content_header}>
+            <Typography component="h1" variant="h4" align="center">
+              ML Choose tutors
+            </Typography>
+          </Box>
           <React.Fragment>
             <Box className={classes.content}>
               <Features state={state} setState={setState} />
             </Box>
             <Divider />
-            <Box className={classes.content}>
+            <Box className={classes.content_footer}>
               <Result result={result} />
             </Box>
           </React.Fragment>

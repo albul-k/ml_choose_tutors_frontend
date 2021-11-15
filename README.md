@@ -1,4 +1,8 @@
-# Project name: ml_choose_tutors_frontend
+# ML Choose tutors (frontend)
+
+## Used stack
+
+* React, MUI, Axios, TypeScript
 
 ## Link to the Kaggle competition
 
@@ -27,17 +31,25 @@ The goal is to predict the probability for a tutor to be a proper one for prepar
 ### Clone repository and run project
 
 ```bash
-#!/bin/bash
+# Clone repository
 git clone https://github.com/albul-k/ml_choose_tutors_frontend.git
 cd ml_choose_tutors_frontend
+
+# Install requirements
 npm install
-npm start
+npm run build
+
+# Install serve
+npm install -g serve
+
+# Run build
+serve -s build
 ```
 
 ### Open link
 
 [http://localhost:3000](http://localhost:3000)
 
-## Link to the backend part
+## Link to the backend repository
 
 <https://github.com/albul-k/ml_choose_tutors_backend>
